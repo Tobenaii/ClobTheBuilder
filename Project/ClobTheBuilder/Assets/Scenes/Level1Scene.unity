@@ -1332,12 +1332,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911934b5b7f5243459e18d31c28746d7, type: 3}
---- !u!23 &2380713531039797571 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2380713531039797571, guid: 326eafd9d73c4674f9d8ee926b5b56b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 819242226189892945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3520977206569021628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1491,32 +1485,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4abb7424d18994293b6b2832cdafb0, type: 3}
---- !u!1 &5425034912406671440 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5425034912406671440, guid: 326eafd9d73c4674f9d8ee926b5b56b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 819242226189892945}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5425034912406671441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5425034912406671440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec1a5a15c49e95e4b8cc0a4388bfa8a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_gameTime: 10
-  m_gameTimer: {fileID: 11400000, guid: 81f061f48f83c2f439a8c409a1e016b2, type: 2}
-  m_increaseFromWater: 0
-  m_decreaseFromHeat: 0
-  m_renderer: {fileID: 2380713531039797571}
-  m_wetBoi: {fileID: 2100000, guid: fa7712070da4391418960335d7254fc3, type: 2}
-  m_dryBoi: {fileID: 2100000, guid: d7e24c1742d22b74cbe785cd469b7b05, type: 2}
-  m_timerEndEvent: {fileID: 11400000, guid: a065b383f5499c44cb809c529169b9b1, type: 2}
 --- !u!1001 &8310479375428176650
 PrefabInstance:
   m_ObjectHideFlags: 0
