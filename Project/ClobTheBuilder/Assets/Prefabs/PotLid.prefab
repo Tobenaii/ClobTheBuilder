@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4030639384812983508}
   - component: {fileID: 4030639384810116340}
   - component: {fileID: 4030639384811214388}
+  - component: {fileID: 248679829157206053}
   m_Layer: 0
   m_Name: PotLid
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &248679829157206053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030639384813209844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 1.326841, z: 4.278843}
+  m_Center: {x: -0.00000047683716, y: 0.22822951, z: 0.00000047683716}
