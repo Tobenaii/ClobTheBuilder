@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 2559576875852210455}
   - component: {fileID: 3318182308655483103}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: DeathCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8784164907355143684}
   m_LocalRotation: {x: 0.003097284, y: -0.0033408476, z: 0.028251952, w: 0.99959046}
-  m_LocalPosition: {x: 1.376, y: 1.569, z: -1.002}
+  m_LocalPosition: {x: 1.416, y: 1.571, z: -1.002}
   m_LocalScale: {x: 0.30249655, y: 3.0881805, z: 2.197368}
   m_Children: []
   m_Father: {fileID: 6118173321797533168}
