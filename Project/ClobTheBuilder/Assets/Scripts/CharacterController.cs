@@ -21,12 +21,14 @@ public class CharacterController : MonoBehaviour
     private bool m_jumpQueued;
     private bool m_isSlidingLeft;
     private bool m_isSlidingRight;
-    private BoxCollider m_col;
+    private CapsuleCollider m_col;
+    private bool m_inRightCo;
+    private bool m_inLeftCo;
 
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
-        m_col = GetComponent<BoxCollider>();
+        m_col = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class CharacterController : MonoBehaviour
         else
             m_moveSpeed = Mathf.MoveTowards(m_moveSpeed, 0, m_stopAcceleration * Time.deltaTime);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.right * (m_col.bounds.extents.x * 1.1f), Vector3.right, out hit, 0.5f))
+        if (Physics.Raycast(transform.position + Vector3.right * (m_col.bounds.extents.x * 1.5f), Vector3.right, out hit, 0.5f))
         {
             if (!hit.collider.isTrigger)
             {
@@ -68,10 +70,10 @@ public class CharacterController : MonoBehaviour
                     transform.position += Vector3.left * 0.1f;
             }
         }
-        else if (m_isSlidingRight)
-            m_isSlidingRight = false;
+        else if (m_isSlidingRight && !m_inRightCo)
+            StartCoroutine(WallJumpRightLeway());
 
-        if (Physics.Raycast(transform.position + Vector3.left * m_col.bounds.extents.x * 1.1f, Vector3.left, out hit, 0.5f))
+        if (Physics.Raycast(transform.position + Vector3.left * m_col.bounds.extents.x * 1.5f, Vector3.left, out hit, 0.5f))
         {
             if (!hit.collider.isTrigger)
             {
@@ -87,24 +89,30 @@ public class CharacterController : MonoBehaviour
             if (Input.GetButton("Right"))
                 transform.position += Vector3.right * 0.1f;
         }
-        else if (m_isSlidingLeft)
-            m_isSlidingLeft = false;
+        else if (m_isSlidingLeft && !m_inLeftCo)
+            StartCoroutine(WallJumpLeftLeway());
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
-
+        Debug.Log(m_isSlidingLeft);
         if (Input.GetButtonDown("Jump"))
         {
             if (m_isGrounded)
                 Jump();
-            if (m_isSlidingLeft)
+            else if (m_isSlidingLeft)
             {
-                m_rb.velocity = Vector3.zero;
+                //m_rb.velocity = Vector3.zero;
+                m_rb.AddForce(m_rb.velocity, ForceMode.Impulse);
+                transform.position += (Vector3)m_wallJumpForce.normalized * 1.5f;
+                //m_rb.MovePosition(transform.position + (Vector3)m_wallJumpForce.normalized);
                 m_rb.AddForce(m_wallJumpForce, ForceMode.Impulse);
                 m_jumpQueued = false;
             }
             else if (m_isSlidingRight)
             {
-                m_rb.velocity = Vector3.zero;
+                //m_rb.velocity = Vector3.zero;
+                m_rb.AddForce(m_rb.velocity, ForceMode.Impulse);
+                transform.position += new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y).normalized * 1.5f;
                 m_rb.AddForce(new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y), ForceMode.Impulse);
+                //m_rb.MovePosition(transform.position + (Vector3)m_wallJumpForce.normalized * -1);
                 m_jumpQueued = false;
             }
             else
@@ -117,28 +125,32 @@ public class CharacterController : MonoBehaviour
 
     private IEnumerator WallJumpRightLeway()
     {
-        float timer = 0.2f;
-        if (m_isGrounded)
+        float timer = 0.1f;
+        if (m_isGrounded || !m_isSlidingRight)
             timer = 0;
+        m_inRightCo = true;
         while (timer > 0)
         {
             timer -= Time.deltaTime;
             yield return null;
         }
         m_isSlidingRight = false;
+        m_inRightCo = false;
     }
 
     private IEnumerator WallJumpLeftLeway()
     {
-        float timer = 0.2f;
-        if (m_isGrounded)
+        float timer = 0.1f;
+        if (m_isGrounded || !m_isSlidingLeft)
             timer = 0;
+        m_inLeftCo = true;
         while (timer > 0)
         {
             timer -= Time.deltaTime;
             yield return null;
         }
         m_isSlidingLeft = false;
+        m_inLeftCo = false;
     }
 
     private IEnumerator JumpQueueTimer()

@@ -3,6 +3,42 @@ guid: 421959092fdb6674b9c6d9ba6f964b70
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: CTRL_Bottom
+    100002: CTRL_Foot_L
+    100004: CTRL_Foot_R
+    100006: CTRL_GRP_Foot_L
+    100008: CTRL_GRP_Foot_R
+    100010: CTRL_Master
+    100012: CTRL_Middle
+    100014: CTRL_Top
+    100016: JNT_Bottom
+    100018: JNT_Foot_L
+    100020: JNT_Foot_R
+    100022: JNT_Middle
+    100024: JNT_Tip
+    100026: JNT_Top
+    100028: SM_Sponge
+    100030: //RootNode
+    400000: CTRL_Bottom
+    400002: CTRL_Foot_L
+    400004: CTRL_Foot_R
+    400006: CTRL_GRP_Foot_L
+    400008: CTRL_GRP_Foot_R
+    400010: CTRL_Master
+    400012: CTRL_Middle
+    400014: CTRL_Top
+    400016: JNT_Bottom
+    400018: JNT_Foot_L
+    400020: JNT_Foot_R
+    400022: JNT_Middle
+    400024: JNT_Tip
+    400026: JNT_Top
+    400028: SM_Sponge
+    400030: //RootNode
+    2100000: lambert2
+    4300000: SM_Sponge
+    9500000: //RootNode
+    13700000: SM_Sponge
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -57,7 +93,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
