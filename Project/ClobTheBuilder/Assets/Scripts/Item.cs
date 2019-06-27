@@ -7,10 +7,11 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Grid m_grid;
     private bool m_isGhost;
-
+    private bool m_firstClick;
     private void OnEnable()
     {
         Ghostify();
+        m_firstClick = true;
     }
 
     private void Ghostify()
@@ -37,7 +38,8 @@ public class Item : MonoBehaviour
         Debug.Log(Camera.main.orthographicSize);
 
         transform.position = m_grid.SnapToGrid(transform.position);
-        if (Input.GetMouseButtonDown(0))
+        if (!m_firstClick && Input.GetMouseButtonDown(0))
             Unghostify();
+        m_firstClick = false;
     }
 }
