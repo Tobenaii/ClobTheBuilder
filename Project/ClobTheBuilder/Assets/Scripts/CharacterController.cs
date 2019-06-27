@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -13,11 +12,15 @@ public class CharacterController : MonoBehaviour
     private float m_maxMoveSpeed;
     [SerializeField]
     private float m_jumpForce;
+    [SerializeField]
+    private Vector2 m_wallJumpForce;
 
     private bool m_isGrounded;
     private float m_moveSpeed;
     private Rigidbody m_rb;
     private bool m_jumpQueued;
+    private bool m_isSlidingLeft;
+    private bool m_isSlidingRight;
 
     private void Awake()
     {
@@ -48,7 +51,7 @@ public class CharacterController : MonoBehaviour
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, 1, 1<<10))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1, 1 << 10))
         {
             m_isGrounded = true;
             if (m_jumpQueued)
@@ -58,13 +61,39 @@ public class CharacterController : MonoBehaviour
                 StopCoroutine(JumpQueueTimer());
             }
         }
-        else
+
+        if (Physics.Raycast(transform.position, Vector3.right, out hit, 0.5f))
         {
-            m_isGrounded = false;
+            if (!m_isSlidingRight)
+                m_rb.velocity = Vector3.zero;
+            m_isSlidingRight = true;
+            m_moveSpeed = 0;
+            transform.position = hit.point - Vector3.right * 0.5f;
+            m_rb.velocity = Vector3.down * 0.1f;
         }
+        else
+            m_isSlidingRight = false;
+
+        if (Physics.Raycast(transform.position, Vector3.left, out hit, 0.5f))
+        {
+            if (!m_isSlidingLeft)
+                m_rb.velocity = Vector3.zero;
+            m_isSlidingLeft = true;
+            m_moveSpeed = 0;
+            transform.position = hit.point - Vector3.right * 0.5f;
+            m_rb.velocity = Vector3.down * 0.1f;
+        }
+        else
+            m_isSlidingLeft = false;
+
+
 
         if (Input.GetButtonDown("Jump"))
         {
+            if (m_isSlidingLeft)
+                m_rb.AddForce(m_wallJumpForce, ForceMode.Impulse);
+            else if (m_isSlidingRight)
+                m_rb.AddForce(new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y), ForceMode.Impulse);
             if (m_isGrounded)
                 m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
             else
@@ -85,6 +114,18 @@ public class CharacterController : MonoBehaviour
             yield return null;
         }
         m_jumpQueued = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9)
+            m_isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == 9)
+            m_isGrounded = false;
     }
 
     private void OnTriggerEnter(Collider other)
