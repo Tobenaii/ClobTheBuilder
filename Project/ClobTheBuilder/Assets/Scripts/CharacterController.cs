@@ -70,14 +70,14 @@ public class CharacterController : MonoBehaviour
         else
             m_isSlidingRight = false;
 
-        if (Physics.Raycast(transform.position, Vector3.left, out hit, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.left, out hit, m_col.size.x * 2.1f))
         {
             if (hit.collider.isTrigger)
                 return;
             if (!m_isSlidingLeft)
                 m_rb.velocity = Vector3.zero;
             m_moveSpeed = 0;
-            transform.position = hit.point - Vector3.left * 0.5f;
+            transform.position = hit.point - Vector3.left * m_col.size.x * 2.1f;
             if (!m_isGrounded)
             {
                 m_rb.velocity = Vector3.down * 0.1f;

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Cookieroach : Item
 {
+    [SerializeField]
+    private float m_moveDistance;
+
 
 }

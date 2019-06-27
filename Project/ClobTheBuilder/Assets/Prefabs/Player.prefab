@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5425034912406671446}
   - component: {fileID: 5425034912406671443}
   - component: {fileID: 5425034912406671441}
+  - component: {fileID: 5601842151575566673}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -82,6 +83,26 @@ BoxCollider:
   m_Size: {x: 0.37, y: 0.28, z: 1}
   m_Center: {x: 0, y: -1.3, z: 0}
 --- !u!114 &5425034912406671441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5425034912406671440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1a5a15c49e95e4b8cc0a4388bfa8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameTime: 10
+  m_gameTimer: {fileID: 11400000, guid: 81f061f48f83c2f439a8c409a1e016b2, type: 2}
+  m_increaseFromWater: 0
+  m_decreaseFromHeat: 0
+  m_renderer: {fileID: 2380713531039797571}
+  m_wetBoi: {fileID: 2100000, guid: fa7712070da4391418960335d7254fc3, type: 2}
+  m_dryBoi: {fileID: 2100000, guid: d7e24c1742d22b74cbe785cd469b7b05, type: 2}
+  m_timerEndEvent: {fileID: 11400000, guid: a065b383f5499c44cb809c529169b9b1, type: 2}
+--- !u!114 &5601842151575566673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
