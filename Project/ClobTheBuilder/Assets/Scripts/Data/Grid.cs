@@ -12,7 +12,7 @@ public class Grid : ScriptableObject
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 20, 1 << 9))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 9))
             return new Vector3((int)hit.point.x, (int)hit.point.y, pos.z);
         return pos;
     }
