@@ -16,7 +16,8 @@ public class PlayerInventory : MonoBehaviour
         {
             if (index >= m_inventory.inventoryItems.Count)
                 return;
-            Instantiate(m_inventory.inventoryItems[index].item, slot.transform, false);
+            GameObject item = Instantiate(m_inventory.inventoryItems[index].item.itemPrefab, slot.transform, true);
+            item.transform.localPosition = Vector3.zero;
             index++;
         }
     }
