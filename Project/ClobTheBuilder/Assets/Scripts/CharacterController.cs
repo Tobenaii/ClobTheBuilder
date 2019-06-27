@@ -80,13 +80,11 @@ public class CharacterController : MonoBehaviour
                 m_rb.velocity = Vector3.zero;
             m_isSlidingLeft = true;
             m_moveSpeed = 0;
-            transform.position = hit.point - Vector3.right * 0.5f;
+            transform.position = hit.point - Vector3.left * 0.5f;
             m_rb.velocity = Vector3.down * 0.1f;
         }
         else
             m_isSlidingLeft = false;
-
-
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -118,13 +116,13 @@ public class CharacterController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 10)
             m_isGrounded = true;
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 10)
             m_isGrounded = false;
     }
 
