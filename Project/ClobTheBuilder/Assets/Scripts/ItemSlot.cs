@@ -32,7 +32,6 @@ public class ItemSlot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Spawn");
         SpawnItem();
     }
 }

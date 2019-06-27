@@ -51,49 +51,56 @@ public class CharacterController : MonoBehaviour
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1, 1 << 10))
-        {
-            m_isGrounded = true;
-            if (m_jumpQueued)
-            {
-                m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
-                m_rb.velocity = Vector3.zero;
-                StopCoroutine(JumpQueueTimer());
-            }
-        }
-
         if (Physics.Raycast(transform.position, Vector3.right, out hit, 0.5f))
         {
+            if (hit.collider.isTrigger)
+                return;
             if (!m_isSlidingRight)
                 m_rb.velocity = Vector3.zero;
-            m_isSlidingRight = true;
             m_moveSpeed = 0;
             transform.position = hit.point - Vector3.right * 0.5f;
-            m_rb.velocity = Vector3.down * 0.1f;
+            if (!m_isGrounded)
+            {
+                m_rb.velocity = Vector3.down * 0.1f;
+                m_isSlidingRight = true;
+            }
         }
         else
             m_isSlidingRight = false;
 
         if (Physics.Raycast(transform.position, Vector3.left, out hit, 0.5f))
         {
+            if (hit.collider.isTrigger)
+                return;
             if (!m_isSlidingLeft)
                 m_rb.velocity = Vector3.zero;
-            m_isSlidingLeft = true;
             m_moveSpeed = 0;
             transform.position = hit.point - Vector3.left * 0.5f;
-            m_rb.velocity = Vector3.down * 0.1f;
+            if (!m_isGrounded)
+            {
+                m_rb.velocity = Vector3.down * 0.1f;
+                m_isSlidingLeft = true;
+            }
         }
         else
             m_isSlidingLeft = false;
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (m_isSlidingLeft)
-                m_rb.AddForce(m_wallJumpForce, ForceMode.Impulse);
-            else if (m_isSlidingRight)
-                m_rb.AddForce(new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y), ForceMode.Impulse);
             if (m_isGrounded)
-                m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+                Jump();
+            if (m_isSlidingLeft)
+            {
+                m_rb.velocity = Vector3.zero;
+                m_rb.AddForce(m_wallJumpForce, ForceMode.Impulse);
+                m_jumpQueued = false;
+            }
+            else if (m_isSlidingRight)
+            {
+                m_rb.velocity = Vector3.zero;
+                m_rb.AddForce(new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y), ForceMode.Impulse);
+                m_jumpQueued = false;
+            }
             else
             {
                 StopCoroutine(JumpQueueTimer());
@@ -114,16 +121,26 @@ public class CharacterController : MonoBehaviour
         m_jumpQueued = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Jump()
     {
-        if (collision.gameObject.layer == 10)
-            m_isGrounded = true;
+        m_rb.velocity = Vector3.zero;
+        m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        m_isGrounded = true;
+        if (m_jumpQueued)
+        {
+            Jump();
+            m_jumpQueued = false;
+            StopCoroutine(JumpQueueTimer());
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.layer == 10)
-            m_isGrounded = false;
+        m_isGrounded = false;
     }
 
     private void OnTriggerEnter(Collider other)
