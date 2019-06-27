@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b592b23018f828a44b54d4db8ed72b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveAcceleration: 20
+  m_moveAcceleration: 50
   m_stopAcceleration: 50
-  m_maxMoveSpeed: 100
+  m_maxMoveSpeed: 30
   m_jumpForce: 30
-  m_wallJumpForce: {x: 10, y: 20}
+  m_wallJumpForce: {x: 10, y: 40}
 --- !u!54 &5425034912406671446
 Rigidbody:
   m_ObjectHideFlags: 0
