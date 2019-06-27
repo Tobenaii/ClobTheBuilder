@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db3d3c743521449ad0272bd4bf10e6, type: 3}
   m_Name: Bookshelf
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 5411964222056931942, guid: 2219949f284a84c4dbbe78c1ecee637f,
+    type: 3}
