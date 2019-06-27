@@ -5,10 +5,6 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    private Renderer m_renderer;
-    [SerializeField]
-    private float m_ghostAlpha;
-    [SerializeField]
     private Grid m_grid;
     private bool m_isGhost;
 
@@ -19,17 +15,17 @@ public class Item : MonoBehaviour
 
     private void Ghostify()
     {
-        Color defaultCol = m_renderer.material.color;
-        defaultCol.a = m_ghostAlpha;
-        m_renderer.material.color = defaultCol;
+        //Color defaultCol = m_renderer.material.color;
+        //defaultCol.a = m_ghostAlpha;
+        //m_renderer.material.color = defaultCol;
         m_isGhost = true;
     }
 
     private void Unghostify()
     {
-        Color defaultCol = m_renderer.material.color;
-        defaultCol.a = 1.0f;
-        m_renderer.material.color = defaultCol;
+        //Color defaultCol = m_renderer.material.color;
+        //defaultCol.a = 1.0f;
+        //m_renderer.material.color = defaultCol;
         m_isGhost = false;
     }
 
