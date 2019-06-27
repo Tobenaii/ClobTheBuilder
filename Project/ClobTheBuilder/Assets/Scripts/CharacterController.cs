@@ -21,10 +21,12 @@ public class CharacterController : MonoBehaviour
     private bool m_jumpQueued;
     private bool m_isSlidingLeft;
     private bool m_isSlidingRight;
+    private BoxCollider m_col;
 
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
+        m_col = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -51,14 +53,14 @@ public class CharacterController : MonoBehaviour
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.right, out hit, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.right, out hit, m_col.size.x * 1.1f))
         {
             if (hit.collider.isTrigger)
                 return;
             if (!m_isSlidingRight)
                 m_rb.velocity = Vector3.zero;
             m_moveSpeed = 0;
-            transform.position = hit.point - Vector3.right * 0.5f;
+            transform.position = hit.point - Vector3.right * m_col.size.x * 1.1f;
             if (!m_isGrounded)
             {
                 m_rb.velocity = Vector3.down * 0.1f;

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5425034912406671447}
   - component: {fileID: 5425034912406671446}
   - component: {fileID: 5425034912406671443}
+  - component: {fileID: 5425034912406671441}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -79,7 +80,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.37, y: 0.28, z: 1}
-  m_Center: {x: -0.24, y: -1.3, z: 0}
+  m_Center: {x: 0, y: -1.3, z: 0}
+--- !u!114 &5425034912406671441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5425034912406671440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1a5a15c49e95e4b8cc0a4388bfa8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameTime: 10
+  m_gameTimer: {fileID: 11400000, guid: 81f061f48f83c2f439a8c409a1e016b2, type: 2}
+  m_increaseFromWater: 0
+  m_decreaseFromHeat: 0
+  m_renderer: {fileID: 2380713531039797571}
+  m_wetBoi: {fileID: 2100000, guid: fa7712070da4391418960335d7254fc3, type: 2}
+  m_dryBoi: {fileID: 2100000, guid: d7e24c1742d22b74cbe785cd469b7b05, type: 2}
+  m_timerEndEvent: {fileID: 11400000, guid: a065b383f5499c44cb809c529169b9b1, type: 2}
 --- !u!1001 &2380713531041696035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,9 +108,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5425034912406671444}
     m_Modifications:
+    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
+      propertyPath: m_Name
+      value: SM_Sponge
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.228
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -143,10 +168,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
-      propertyPath: m_Name
-      value: SM_Sponge
-      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -156,6 +177,12 @@ PrefabInstance:
 --- !u!4 &2380713531041567651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 57e6f4193ac1b24429fcb0b43405846e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2380713531041696035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2380713531039797571 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 57e6f4193ac1b24429fcb0b43405846e,
     type: 3}
   m_PrefabInstance: {fileID: 2380713531041696035}
   m_PrefabAsset: {fileID: 0}
