@@ -7,14 +7,23 @@ public class Item : MonoBehaviour
     public enum RotationMode { NinetyDegree, Mirror }
 
     [SerializeField]
-    private Grid m_grid;
-    [SerializeField]
     private RotationMode m_rotationMode;
     private List<Renderer> m_renderers;
     private bool m_isGhost;
     private bool m_inRedZone;
     private Rigidbody m_rb;
+    [HideInInspector]
     public ItemSlot m_slot;
+
+    public Vector3 SnapToGrid(Vector3 pos)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 9))
+            return new Vector3((int)hit.point.x, (int)hit.point.y, pos.z);
+        return pos;
+    }
+
     private void OnEnable()
     {
         Ghostify();
@@ -84,7 +93,7 @@ public class Item : MonoBehaviour
     {
         if (!m_isGhost)
             return;
-        m_rb.MovePosition(m_grid.SnapToGrid(transform.position));
+        m_rb.MovePosition(SnapToGrid(transform.position));
         if (Input.GetMouseButtonUp(0))
             Unghostify();
         if (Input.GetButtonDown("RotateLeft"))
