@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Level1Inventory
   m_EditorClassIdentifier: 
   inventoryItems:
-  - item: {fileID: 11400000, guid: fbb1868fc66a8254487e3b6094d816df, type: 2}
-    itemAmmount: 1
+  - itemPrefab: {fileID: 5411964222056931942, guid: 2219949f284a84c4dbbe78c1ecee637f,
+      type: 3}
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemAmmount: 5
+  - itemPrefab: {fileID: 6423401586241021707, guid: 94a786d6ed02ab84b889fa1e692a9e19,
+      type: 3}
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemAmmount: 5

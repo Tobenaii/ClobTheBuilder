@@ -7,11 +7,9 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Grid m_grid;
     private bool m_isGhost;
-    private bool m_firstClick;
     private void OnEnable()
     {
         Ghostify();
-        m_firstClick = true;
     }
 
     private void Ghostify()
@@ -30,6 +28,21 @@ public class Item : MonoBehaviour
         m_isGhost = false;
     }
 
+    public virtual void OnEnter(GameObject gameObject)
+    {
+
+    }
+
+    public virtual void OnStay(GameObject gameObject)
+    {
+
+    }
+
+    public virtual void OnExit(GameObject gameObject)
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -38,8 +51,10 @@ public class Item : MonoBehaviour
         Debug.Log(Camera.main.orthographicSize);
 
         transform.position = m_grid.SnapToGrid(transform.position);
-        if (!m_firstClick && Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonUp(0))
+        {
             Unghostify();
-        m_firstClick = false;
+        }
     }
 }
