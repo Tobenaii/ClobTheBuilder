@@ -322,6 +322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_grid: {fileID: 11400000, guid: fe0d461e911de864b8425710121bdda8, type: 2}
+  m_rotationMode: 1
+  m_slot: {fileID: 0}
 --- !u!54 &946395465
 Rigidbody:
   m_ObjectHideFlags: 0

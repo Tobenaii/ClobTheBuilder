@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public enum RotationMode { NinetyDegree, Mirror }
+
     [SerializeField]
     private Grid m_grid;
+    [SerializeField]
+    private RotationMode m_rotationMode;
     private List<Renderer> m_renderers;
     private bool m_isGhost;
     private bool m_inRedZone;
@@ -82,8 +86,18 @@ public class Item : MonoBehaviour
             return;
         m_rb.MovePosition(m_grid.SnapToGrid(transform.position));
         if (Input.GetMouseButtonUp(0))
-        {
             Unghostify();
+        if (Input.GetButtonDown("RotateLeft"))
+        {
+            switch (m_rotationMode)
+            {
+                case RotationMode.NinetyDegree:
+                    transform.Rotate(Vector3.forward, 90);
+                    break;
+                case RotationMode.Mirror:
+                    transform.Rotate(Vector3.up, 180);
+                    break;
+            }
         }
     }
 }
