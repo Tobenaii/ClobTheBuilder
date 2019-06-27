@@ -17,7 +17,19 @@ MonoBehaviour:
       type: 3}
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     itemAmmount: 5
+  - itemPrefab: {fileID: 5411964222056931942, guid: 2219949f284a84c4dbbe78c1ecee637f,
+      type: 3}
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemAmmount: 5
+  - itemPrefab: {fileID: 6352304448125007622, guid: 522b35dc317dfa9429f636caf58bcbbc,
+      type: 3}
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemAmmount: 5
   - itemPrefab: {fileID: 6423401586241021707, guid: 94a786d6ed02ab84b889fa1e692a9e19,
+      type: 3}
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemAmmount: 5
+  - itemPrefab: {fileID: 2969688326421483091, guid: efa9d3d66fa8a5a4ca73e95e85b494ea,
       type: 3}
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     itemAmmount: 5

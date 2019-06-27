@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2969688326421713523}
   - component: {fileID: 2969688326418322003}
   - component: {fileID: 2969688326419288211}
+  - component: {fileID: 8613085289260010550}
   m_Layer: 0
   m_Name: BrokenTap
   m_TagString: Untagged
@@ -77,3 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8613085289260010550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969688326421483091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334fa6c14aeb4534090e7ead40989fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationMode: 0
+  m_slot: {fileID: 0}
+  m_force: 250
+  m_exitForceMultiplier: 2
