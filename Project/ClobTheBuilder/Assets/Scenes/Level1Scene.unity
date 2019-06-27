@@ -914,6 +914,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 651283333}
+    - target: {fileID: 576071486542067806, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 576071487586830738, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23170220459378405, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ce240167f8b8a4fbc18b652d20d719, type: 3}
 --- !u!1001 &819242226189892945
@@ -1141,6 +1156,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117221937386546674, guid: 7e4abb7424d18994293b6b2832cdafb0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5117221937386546675, guid: 7e4abb7424d18994293b6b2832cdafb0,
         type: 3}
       propertyPath: m_Convex
@@ -1150,11 +1170,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117221937386546674, guid: 7e4abb7424d18994293b6b2832cdafb0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4abb7424d18994293b6b2832cdafb0, type: 3}
