@@ -6,11 +6,12 @@ using UnityEngine;
 public class Inventory : ScriptableObject
 {
     [System.Serializable]
-    public class InventoryData
+    public class ItemData
     {
-        public ItemData item;
+        public GameObject itemPrefab;
+        public Sprite itemSprite;
         public int itemAmmount;
     }
 
-    public List<InventoryData> inventoryItems;
+    public List<ItemData> inventoryItems;
 }
