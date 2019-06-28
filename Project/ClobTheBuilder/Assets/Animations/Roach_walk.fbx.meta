@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: b13461d43ba6b2f4882d73ce4fa0da49
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Roach_0003:CTRL_Antenna_01_L
+    100002: Roach_0003:CTRL_Antenna_01_R
+    100004: Roach_0003:CTRL_Antenna_02_L
+    100006: Roach_0003:CTRL_Antenna_02_R
+    100008: Roach_0003:CTRL_Body
+    100010: Roach_0003:CTRL_GRP_03_L
+    100012: Roach_0003:CTRL_GRP_Antenna_01_L
+    100014: Roach_0003:CTRL_GRP_Antenna_01_R
+    100016: Roach_0003:CTRL_GRP_Antenna_02_L
+    100018: Roach_0003:CTRL_GRP_Antenna_02_R
+    100020: Roach_0003:CTRL_GRP_Body
+    100022: Roach_0003:CTRL_GRP_Leg_01_L
+    100024: Roach_0003:CTRL_GRP_Leg_01_R
+    100026: Roach_0003:CTRL_GRP_Leg_02_L
+    100028: Roach_0003:CTRL_GRP_Leg_02_R
+    100030: Roach_0003:CTRL_GRP_Leg_03_R
+    100032: Roach_0003:CTRL_Leg_01_L
+    100034: Roach_0003:CTRL_Leg_01_R
+    100036: Roach_0003:CTRL_Leg_02_L
+    100038: Roach_0003:CTRL_Leg_02_R
+    100040: Roach_0003:CTRL_Leg_03_L
+    100042: Roach_0003:CTRL_Leg_03_R
+    100044: Roach_0003:CTRL_Master
+    100046: Roach_0003:JNT_Antenna_01_L
+    100048: Roach_0003:JNT_Antenna_01_R
+    100050: Roach_0003:JNT_Antenna_02_L
+    100052: Roach_0003:JNT_Antenna_02_R
+    100054: Roach_0003:JNT_Antenna_03_L
+    100056: Roach_0003:JNT_Antenna_03_R
+    100058: Roach_0003:JNT_Body
+    100060: Roach_0003:JNT_Head
+    100062: Roach_0003:JNT_Leg_01_L
+    100064: Roach_0003:JNT_Leg_02_L
+    100066: Roach_0003:JNT_Leg_03_L
+    100068: Roach_0003:JNT_Reg_01_R
+    100070: Roach_0003:JNT_Reg_02_R
+    100072: Roach_0003:JNT_Reg_03_R
+    100074: Roach_0003:SM_Roach
+    100076: //RootNode
+    400000: Roach_0003:CTRL_Antenna_01_L
+    400002: Roach_0003:CTRL_Antenna_01_R
+    400004: Roach_0003:CTRL_Antenna_02_L
+    400006: Roach_0003:CTRL_Antenna_02_R
+    400008: Roach_0003:CTRL_Body
+    400010: Roach_0003:CTRL_GRP_03_L
+    400012: Roach_0003:CTRL_GRP_Antenna_01_L
+    400014: Roach_0003:CTRL_GRP_Antenna_01_R
+    400016: Roach_0003:CTRL_GRP_Antenna_02_L
+    400018: Roach_0003:CTRL_GRP_Antenna_02_R
+    400020: Roach_0003:CTRL_GRP_Body
+    400022: Roach_0003:CTRL_GRP_Leg_01_L
+    400024: Roach_0003:CTRL_GRP_Leg_01_R
+    400026: Roach_0003:CTRL_GRP_Leg_02_L
+    400028: Roach_0003:CTRL_GRP_Leg_02_R
+    400030: Roach_0003:CTRL_GRP_Leg_03_R
+    400032: Roach_0003:CTRL_Leg_01_L
+    400034: Roach_0003:CTRL_Leg_01_R
+    400036: Roach_0003:CTRL_Leg_02_L
+    400038: Roach_0003:CTRL_Leg_02_R
+    400040: Roach_0003:CTRL_Leg_03_L
+    400042: Roach_0003:CTRL_Leg_03_R
+    400044: Roach_0003:CTRL_Master
+    400046: Roach_0003:JNT_Antenna_01_L
+    400048: Roach_0003:JNT_Antenna_01_R
+    400050: Roach_0003:JNT_Antenna_02_L
+    400052: Roach_0003:JNT_Antenna_02_R
+    400054: Roach_0003:JNT_Antenna_03_L
+    400056: Roach_0003:JNT_Antenna_03_R
+    400058: Roach_0003:JNT_Body
+    400060: Roach_0003:JNT_Head
+    400062: Roach_0003:JNT_Leg_01_L
+    400064: Roach_0003:JNT_Leg_02_L
+    400066: Roach_0003:JNT_Leg_03_L
+    400068: Roach_0003:JNT_Reg_01_R
+    400070: Roach_0003:JNT_Reg_02_R
+    400072: Roach_0003:JNT_Reg_03_R
+    400074: Roach_0003:SM_Roach
+    400076: //RootNode
+    2100000: Roach_0003_lambert2
+    4300000: Roach_0003:SM_Roach
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Roach_0003:SM_Roach
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
