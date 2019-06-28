@@ -7,6 +7,7 @@ TagManager:
   - Item
   - FinishHim
   - LoveyDovey
+  - NoJump
   layers:
   - Default
   - TransparentFX

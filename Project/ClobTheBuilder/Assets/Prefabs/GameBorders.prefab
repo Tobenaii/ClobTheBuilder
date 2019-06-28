@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2214666401168974763}
   m_Layer: 0
   m_Name: GameBorderL
-  m_TagString: Untagged
+  m_TagString: NoJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 2214666401296101197}
   m_Layer: 0
   m_Name: GameBorderR
-  m_TagString: Untagged
+  m_TagString: NoJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 2214666402546642450}
   m_Layer: 0
   m_Name: GameBorderB
-  m_TagString: Untagged
+  m_TagString: NoJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

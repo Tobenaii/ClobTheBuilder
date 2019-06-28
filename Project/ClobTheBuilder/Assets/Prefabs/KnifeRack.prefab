@@ -407,7 +407,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4897710120752686478}
-  m_Mesh: {fileID: 4300000, guid: 41d452e3b601bd84ba1513abb8b02389, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d8ffdbd2255781440b8559d6f46ed33b, type: 3}
 --- !u!23 &4897710120754887502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41d452e3b601bd84ba1513abb8b02389, type: 3}
+  - {fileID: 2100000, guid: abe612aae89698840946663ef14b99d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1253,6 +1253,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnifeR
       objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 10d68a8cd5bd90443a494dbbf5cd415e, type: 3}
+    - target: {fileID: 2300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abe612aae89698840946663ef14b99d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
 --- !u!4 &663875584485590007 stripped
@@ -1328,6 +1336,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnifeL
       objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 10d68a8cd5bd90443a494dbbf5cd415e, type: 3}
+    - target: {fileID: 2300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abe612aae89698840946663ef14b99d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
 --- !u!4 &1023575582124808649 stripped
@@ -1403,6 +1419,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnifeM
       objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 10d68a8cd5bd90443a494dbbf5cd415e, type: 3}
+    - target: {fileID: 2300000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abe612aae89698840946663ef14b99d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
 --- !u!4 &4101955746272215343 stripped
