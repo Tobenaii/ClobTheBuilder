@@ -14,6 +14,7 @@ public class ItemSlot : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 1;
         if (m_slotIndex >= m_inventory.inventoryItems.Count)
             return;
         m_spriteRenderer.sprite = m_inventory.inventoryItems[m_slotIndex].itemSprite;
