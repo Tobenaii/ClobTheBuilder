@@ -26,6 +26,10 @@ public class CharacterController : MonoBehaviour
     private GameEvent m_loveyDoveyEvent;
     [SerializeField]
     private Animator m_animator;
+    [SerializeField]
+    private AudioSource m_jumpSound;
+    [SerializeField]
+    private AudioSource m_splatSound;
 
     private bool m_isGrounded;
     private float m_moveSpeed;
@@ -209,6 +213,12 @@ public class CharacterController : MonoBehaviour
         m_rb.velocity = Vector3.zero;
         m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         m_animator.SetTrigger("Jump");
+        m_jumpSound.Play();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        m_splatSound.Play();
     }
 
     private void OnCollisionStay(Collision collision)
