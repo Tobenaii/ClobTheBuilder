@@ -12,7 +12,6 @@ public class Cookieroach : Item
     private float m_stopTime;
     [SerializeField]
     private float m_rotateSpeed;
-    private Rigidbody m_rb;
 
     private bool m_startMoving;
     private Vector3 m_initPos;

@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 8310479376242508180}
   - component: {fileID: 8310479376242508183}
   - component: {fileID: 8310479376242508182}
+  - component: {fileID: 2435636877527660127}
+  - component: {fileID: 2859310776733032742}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -165,3 +167,47 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8310479376242508177}
   m_Enabled: 1
+--- !u!114 &2435636877527660127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310479376242508177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411b3c5dfde8884a9dad62b352b4281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_preGamePos: {x: 0, y: 0, z: -68}
+  m_inGamePos: {x: 0, y: 0, z: -45}
+  m_moveSpeed: 5
+--- !u!114 &2859310776733032742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310479376242508177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e4d4ade0faafe49b2fe2d55c4c2fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e355dfef7c18c2449ac0f30a46559eab, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2435636877527660127}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

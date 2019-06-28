@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     private List<Renderer> m_renderers;
     private bool m_isGhost;
     private bool m_inRedZone;
-    private Rigidbody m_rb;
+    protected Rigidbody m_rb;
     [HideInInspector]
     public ItemSlot m_slot;
 
