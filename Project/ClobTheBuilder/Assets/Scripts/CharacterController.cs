@@ -35,6 +35,7 @@ public class CharacterController : MonoBehaviour
     private bool m_inRightCo;
     private bool m_inLeftCo;
     private bool m_isPaused;
+    bool m_startedGame;
 
     private void Awake()
     {
@@ -42,9 +43,23 @@ public class CharacterController : MonoBehaviour
         m_col = GetComponent<Collider>();
     }
 
+    private void OnEnable()
+    {
+        m_rb.isKinematic = true;
+        m_startedGame = false;
+    }
+
+    public void StartGame()
+    {
+        m_rb.isKinematic = false;
+        m_startedGame = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (!m_startedGame)
+            return;
         if (Input.GetButton("Right"))
         {
             m_moveSpeed += m_currentAcceleration * Time.deltaTime;

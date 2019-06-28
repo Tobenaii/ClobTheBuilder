@@ -20,12 +20,14 @@ public class GameTimer : MonoBehaviour
     private Material m_dryBoi;
     [SerializeField]
     private GameEvent m_timerEndEvent;
+    private bool m_startedGame;
 
     private TimeLerper m_lerper = new TimeLerper();
 
     // Start is called before the first frame update
     private void OnEnable()
     {
+        m_startedGame = false;
         m_gameTimer.value = 0;
         m_lerper.Reset();
     }
@@ -33,20 +35,17 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!m_startedGame)
+            return;
         m_gameTimer.value += Time.deltaTime;
         m_renderer.material.SetFloat("_Blend", m_gameTimer.value / m_gameTime);
         if (m_gameTimer.value >= m_gameTime)
             m_timerEndEvent.Invoke();
     }
 
-    public void PauseGame()
+    public void StartGame()
     {
-
-    }
-
-    public void ResumeGame()
-    {
-
+        m_startedGame = true;
     }
 
     private void OnTriggerEnter(Collider other)
