@@ -90,7 +90,7 @@ public class CharacterController : MonoBehaviour
                 transform.position += Vector3.right * 0.1f;
         }
         else if (m_isSlidingLeft && !m_inLeftCo)
-            StartCoroutine(WallJumpLeftLeway());
+            StartCoroutine(WallJumpLeftLeway()); 
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
         Debug.Log(m_isSlidingLeft);
         if (Input.GetButtonDown("Jump"))
