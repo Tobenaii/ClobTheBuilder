@@ -112,6 +112,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &69544814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_Name
+      value: Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -38
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 500
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c5d27ceb62f311a4cbec7a8ee23d1999, type: 3}
 --- !u!1 &97289639
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +289,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1508466288985996425, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
 --- !u!4 &233554185 stripped
 Transform:
@@ -766,7 +836,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1508466288985996425, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
 --- !u!4 &917912916 stripped
 Transform:
@@ -851,7 +922,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1508466288985996425, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f942f4b069379a459dffcabb357fc85, type: 3}
 --- !u!4 &948169973 stripped
 Transform:
