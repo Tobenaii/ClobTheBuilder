@@ -78,6 +78,8 @@ public class Item : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (!m_isGhost)
+            return;
         m_inRedZone = true;
         foreach (Renderer rend in m_renderers)
         {
@@ -87,11 +89,19 @@ public class Item : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
+        if (!m_isGhost)
+            return;
         m_inRedZone = false;
         foreach (Renderer rend in m_renderers)
         {
             rend.material.color = new Color(1, 1, 1);
         }
+    }
+
+    private void OnMouseDown()
+    {
+        if (!m_isGhost)
+            Ghostify();
     }
 
     // Update is called once per frame

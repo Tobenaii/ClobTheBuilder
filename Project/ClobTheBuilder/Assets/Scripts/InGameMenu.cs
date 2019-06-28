@@ -17,6 +17,10 @@ public class InGameMenu : MonoBehaviour
     private string m_choppedText;
     [SerializeField]
     private GameObject m_pauseMenu;
+    [SerializeField]
+    private GameEvent m_startGameEvent;
+    [SerializeField]
+    private GameObject m_startButton;
 
     public void ShowDriedOut()
     {
@@ -50,6 +54,12 @@ public class InGameMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void StartGame()
+    {
+        m_startGameEvent.Invoke();
+        m_startButton.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +68,7 @@ public class InGameMenu : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 1;
+        m_startButton.SetActive(true);
     }
     // Update is called once per frame
     void Update()
