@@ -742,6 +742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpongeGF
       objectReference: {fileID: 0}
+    - target: {fileID: 8779597649627663887, guid: e8c978e6fda342b4ba3cd434e33b6460,
+        type: 3}
+      propertyPath: m_TagString
+      value: LoveyDovey
+      objectReference: {fileID: 0}
     - target: {fileID: 8779597649628025391, guid: e8c978e6fda342b4ba3cd434e33b6460,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -866,30 +871,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 576071488558295861, guid: 28ce240167f8b8a4fbc18b652d20d719,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 576071488558295817, guid: 28ce240167f8b8a4fbc18b652d20d719,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 651283333}
-    - target: {fileID: 576071486542067806, guid: 28ce240167f8b8a4fbc18b652d20d719,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 576071487586830738, guid: 28ce240167f8b8a4fbc18b652d20d719,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 23170220459378405, guid: 28ce240167f8b8a4fbc18b652d20d719,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ce240167f8b8a4fbc18b652d20d719, type: 3}
@@ -959,16 +949,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425034912406671447, guid: 326eafd9d73c4674f9d8ee926b5b56b2,
-        type: 3}
-      propertyPath: m_maxSprintSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425034912406671447, guid: 326eafd9d73c4674f9d8ee926b5b56b2,
-        type: 3}
-      propertyPath: m_sprintAcceleration
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 326eafd9d73c4674f9d8ee926b5b56b2, type: 3}
