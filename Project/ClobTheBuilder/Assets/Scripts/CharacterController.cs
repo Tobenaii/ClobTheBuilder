@@ -87,7 +87,7 @@ public class CharacterController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position + Vector3.right * (m_col.bounds.extents.x * 1.5f), Vector3.right, out hit, 0.5f))
         {
-            if (!hit.collider.isTrigger)
+            if (!hit.collider.isTrigger && !hit.transform.CompareTag("NoJump"))
             {
                 if (!m_isSlidingRight)
                     m_rb.velocity = Vector3.zero;
@@ -106,7 +106,7 @@ public class CharacterController : MonoBehaviour
 
         if (Physics.Raycast(transform.position + Vector3.left * m_col.bounds.extents.x * 1.5f, Vector3.left, out hit, 0.5f))
         {
-            if (!hit.collider.isTrigger)
+            if (!hit.collider.isTrigger && !hit.transform.CompareTag("NoJump"))
             {
                 if (!m_isSlidingLeft)
                     m_rb.velocity = Vector3.zero;
