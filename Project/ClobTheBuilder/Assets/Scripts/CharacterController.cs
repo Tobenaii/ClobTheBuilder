@@ -34,6 +34,7 @@ public class CharacterController : MonoBehaviour
     private CapsuleCollider m_col;
     private bool m_inRightCo;
     private bool m_inLeftCo;
+    private bool m_isPaused;
 
     private void Awake()
     {
@@ -44,7 +45,6 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetButton("Right"))
         {
             m_moveSpeed += m_currentAcceleration * Time.deltaTime;
@@ -222,6 +222,17 @@ public class CharacterController : MonoBehaviour
             m_loveyDoveyEvent.Invoke();
     }
 
+    public void PauseGame()
+    {
+        m_isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        m_isPaused = false;
+        Time.timeScale = 0;
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Item"))

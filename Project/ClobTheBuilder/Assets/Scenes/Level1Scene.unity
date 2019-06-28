@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &122831986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 122831986, guid: 28ce240167f8b8a4fbc18b652d20d719,
+    type: 3}
+  m_PrefabInstance: {fileID: 576071488585712872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3e70d494d4aef4196c5dbde65647d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &468550969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -804,6 +816,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c978e6fda342b4ba3cd434e33b6460, type: 3}
+--- !u!1 &576071486542067806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 576071486542067806, guid: 28ce240167f8b8a4fbc18b652d20d719,
+    type: 3}
+  m_PrefabInstance: {fileID: 576071488585712872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &576071488585712872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -881,6 +899,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 576071488053977044, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122831986}
+    - target: {fileID: 576071488053977044, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 576071488053977044, guid: 28ce240167f8b8a4fbc18b652d20d719,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 122831986, guid: 28ce240167f8b8a4fbc18b652d20d719, type: 3}
+      propertyPath: m_pauseMenu
+      value: 
+      objectReference: {fileID: 576071486542067806}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ce240167f8b8a4fbc18b652d20d719, type: 3}
 --- !u!1001 &819242226189892945
