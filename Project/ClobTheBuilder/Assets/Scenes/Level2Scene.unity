@@ -1089,6 +1089,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2739855494486914863, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739855494734591997, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739855493790949931, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739855493749634770, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184846734936227156, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295227111785249732, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e799d52951b6a349b956eb46ec9e39f,
+        type: 2}
+    - target: {fileID: 7450661755432200717, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e799d52951b6a349b956eb46ec9e39f,
+        type: 2}
+    - target: {fileID: 8003777412454867926, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e799d52951b6a349b956eb46ec9e39f,
+        type: 2}
+    - target: {fileID: 3455697862359910514, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e799d52951b6a349b956eb46ec9e39f,
+        type: 2}
+    - target: {fileID: 4088939759970706002, guid: 45d06030c107b3344a80bd1e38f0e6d2,
+        type: 3}
+      propertyPath: m_inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e799d52951b6a349b956eb46ec9e39f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d06030c107b3344a80bd1e38f0e6d2, type: 3}
 --- !u!1 &1569519674
