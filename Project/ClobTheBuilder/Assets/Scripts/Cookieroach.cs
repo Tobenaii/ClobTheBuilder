@@ -28,6 +28,7 @@ public class Cookieroach : Item
     public void StartGame()
     {
         m_started = true;
+        m_animator.SetTrigger("Walk");
     }
 
     private void Update()
