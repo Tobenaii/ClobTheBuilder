@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour
     private GameEvent m_deadEvent;
     [SerializeField]
     private GameEvent m_loveyDoveyEvent;
+    [SerializeField]
+    private Animator m_animator;
 
     private bool m_isGrounded;
     private float m_moveSpeed;
@@ -138,6 +140,7 @@ public class CharacterController : MonoBehaviour
                 transform.position += (Vector3)m_wallJumpForce.normalized * 1.5f;
                 //m_rb.MovePosition(transform.position + (Vector3)m_wallJumpForce.normalized);
                 m_rb.AddForce(m_wallJumpForce, ForceMode.Impulse);
+                m_animator.SetTrigger("Jump");
                 m_jumpQueued = false;
             }
             else if (m_isSlidingRight)
@@ -146,6 +149,7 @@ public class CharacterController : MonoBehaviour
                 m_rb.AddForce(m_rb.velocity, ForceMode.Impulse);
                 transform.position += new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y).normalized * 1.5f;
                 m_rb.AddForce(new Vector3(m_wallJumpForce.x * -1, m_wallJumpForce.y), ForceMode.Impulse);
+                m_animator.SetTrigger("Jump");
                 //m_rb.MovePosition(transform.position + (Vector3)m_wallJumpForce.normalized * -1);
                 m_jumpQueued = false;
             }
@@ -155,6 +159,7 @@ public class CharacterController : MonoBehaviour
                 StartCoroutine(JumpQueueTimer());
             }
         }
+        m_animator.SetFloat("RunSpeed", m_moveSpeed);
     }
 
     private IEnumerator WallJumpRightLeway()
@@ -203,6 +208,7 @@ public class CharacterController : MonoBehaviour
     {
         m_rb.velocity = Vector3.zero;
         m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+        m_animator.SetTrigger("Jump");
     }
 
     private void OnCollisionStay(Collision collision)

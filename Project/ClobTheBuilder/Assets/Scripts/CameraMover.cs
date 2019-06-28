@@ -19,6 +19,7 @@ public class CameraMover : MonoBehaviour
 
     public void StartGame()
     {
+        Time.timeScale = 1;
         m_moveToInGame = true;
     }
 
