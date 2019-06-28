@@ -223,6 +223,8 @@ public class CharacterController : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (collision.transform.CompareTag("NoJump"))
+            return;
         m_isGrounded = true;
         if (m_jumpQueued)
         {
