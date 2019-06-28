@@ -17,14 +17,29 @@ public class Cookieroach : Item
     private Vector3 m_initPos;
     bool m_moveForward;
     private bool m_rotating;
+    [SerializeField]
+    private Animator m_animator;
+    private bool m_started;
+
+    private void Start()
+    {
+    }
+
+    public void StartGame()
+    {
+        m_started = true;
+    }
 
     private void Update()
     {
         base.Update();
+        if (!m_started)
+            return;
         if (!m_startMoving)
             return;
         if (m_moveForward)
         {
+
             if (Vector3.Distance(transform.position, m_initPos + transform.right * m_moveDistance) > 0.005)
                 m_rb.MovePosition(Vector3.MoveTowards(transform.position, m_initPos + transform.right * m_moveDistance, m_moveSpeed * Time.deltaTime));
             else if (!m_rotating)
