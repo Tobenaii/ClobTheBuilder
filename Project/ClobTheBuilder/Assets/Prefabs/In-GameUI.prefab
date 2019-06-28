@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 576071486750495883}
   - component: {fileID: 576071486750495882}
   - component: {fileID: 576071486750495881}
+  - component: {fileID: 5164581797285369030}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -270,6 +271,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5164581797285369030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576071486750495927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754f11af910a86240b003769f8239b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576071486787952274
 GameObject:
   m_ObjectHideFlags: 0
