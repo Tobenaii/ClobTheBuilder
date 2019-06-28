@@ -51,11 +51,11 @@ public class GameTimer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Water"))
-            m_gameTimer.value += m_increaseFromWater;
-        else if (other.CompareTag("Heat"))
-            m_gameTimer.value -= m_decreaseFromHeat;
-        if (m_gameTimer.value > m_gameTime)
-            m_gameTimer.value = m_gameTime;
+        //if (other.CompareTag("Water"))
+        //    m_gameTimer.value += m_increaseFromWater;
+        //else if (other.CompareTag("Heat"))
+        //    m_gameTimer.value -= m_decreaseFromHeat;
+        //if (m_gameTimer.value > m_gameTime)
+        //    m_gameTimer.value = m_gameTime;
     }
 }

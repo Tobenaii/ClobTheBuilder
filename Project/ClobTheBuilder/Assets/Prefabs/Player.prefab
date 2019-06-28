@@ -51,10 +51,11 @@ MonoBehaviour:
   m_moveAcceleration: 50
   m_stopAcceleration: 50
   m_maxMoveSpeed: 30
-  m_maxSprintSpeed: 0
-  m_sprintAcceleration: 0
+  m_maxSprintSpeed: 50
+  m_sprintAcceleration: 100
   m_jumpForce: 30
   m_wallJumpForce: {x: 10, y: 40}
+  m_deadEvent: {fileID: 11400000, guid: a36a1710cfe73734d8b9e111fe7d041d, type: 2}
 --- !u!54 &5425034912406671446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -197,6 +198,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5425034912406671444}
     m_Modifications:
+    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
+      propertyPath: m_Name
+      value: SM_Sponge
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -256,14 +265,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
-      propertyPath: m_Name
-      value: SM_Sponge
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}

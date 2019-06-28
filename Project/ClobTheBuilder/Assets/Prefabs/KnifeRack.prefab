@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7579918676575915978}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5574046614981651261}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 8896372541460446014}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 6117063600704450286}
   m_Layer: 0
   m_Name: KnifeRack
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4897710120752686478}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.5, y: 0, z: 4}
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children:
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 6372129294828511140}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 6170210165904100654}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 5967557284634006641}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 7382714049477411723}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 8793634775924807153}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 189131462069231754}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: FinishHim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,6 +920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4897710120752593326}
     m_Modifications:
+    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Name
+      value: KnifeR
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.054
@@ -976,10 +980,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.8000004
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
-      propertyPath: m_Name
-      value: KnifeR
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
 --- !u!4 &663875584485590007 stripped
@@ -995,6 +995,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4897710120752593326}
     m_Modifications:
+    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Name
+      value: KnifeL
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.014
@@ -1051,10 +1055,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.8000004
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
-      propertyPath: m_Name
-      value: KnifeL
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
 --- !u!4 &1023575582124808649 stripped
@@ -1070,6 +1070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4897710120752593326}
     m_Modifications:
+    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
+      propertyPath: m_Name
+      value: KnifeM
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.034
@@ -1125,10 +1129,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.8000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}
-      propertyPath: m_Name
-      value: KnifeM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90e3032a65643439f2ecdf43c2b6e7, type: 3}

@@ -12,6 +12,7 @@ public class Cookieroach : Item
     private float m_stopTime;
     [SerializeField]
     private float m_rotateSpeed;
+    private Rigidbody m_rb;
 
     private bool m_startMoving;
     private Vector3 m_initPos;
@@ -26,14 +27,14 @@ public class Cookieroach : Item
         if (m_moveForward)
         {
             if (Vector3.Distance(transform.position, m_initPos + transform.right * m_moveDistance) > 0.005)
-                transform.position = Vector3.MoveTowards(transform.position, m_initPos + transform.right * m_moveDistance, m_moveSpeed * Time.deltaTime);
+                m_rb.MovePosition(Vector3.MoveTowards(transform.position, m_initPos + transform.right * m_moveDistance, m_moveSpeed * Time.deltaTime));
             else if (!m_rotating)
                 StartCoroutine(Rotate(false));
         }
         else
         {
             if (Vector3.Distance(transform.position, m_initPos + transform.right * m_moveDistance) > 0.005)
-                transform.position = Vector3.MoveTowards(transform.position, m_initPos + transform.right * m_moveDistance, m_moveSpeed * Time.deltaTime);
+                m_rb.MovePosition(Vector3.MoveTowards(transform.position, m_initPos + transform.right * m_moveDistance, m_moveSpeed * Time.deltaTime));
             else if (!m_rotating)
                 StartCoroutine(Rotate(true));
         }
@@ -68,5 +69,6 @@ public class Cookieroach : Item
         m_startMoving = true;
         m_initPos = transform.position;
         m_moveForward = true;
+        m_rb = GetComponent<Rigidbody>();
     }
 }

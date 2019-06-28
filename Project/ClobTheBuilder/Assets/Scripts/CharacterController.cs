@@ -20,6 +20,8 @@ public class CharacterController : MonoBehaviour
     private float m_jumpForce;
     [SerializeField]
     private Vector2 m_wallJumpForce;
+    [SerializeField]
+    private GameEvent m_deadEvent;
 
     private bool m_isGrounded;
     private float m_moveSpeed;
@@ -98,7 +100,6 @@ public class CharacterController : MonoBehaviour
         else if (m_isSlidingLeft && !m_inLeftCo)
             StartCoroutine(WallJumpLeftLeway()); 
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
-        Debug.Log(m_isSlidingLeft);
         if (Input.GetButton("Sprint"))
         {
             m_currentMaxMoveSpeed = m_maxSprintSpeed;
@@ -205,9 +206,15 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Item"))
         {
             other.GetComponent<Item>().OnEnter(gameObject);
+        }
+        else if (other.CompareTag("FinishHim"))
+        {
+            m_deadEvent?.Invoke();
+            Destroy(gameObject);
         }
     }
 
