@@ -31,7 +31,7 @@ public class CharacterController : MonoBehaviour
     private bool m_jumpQueued;
     private bool m_isSlidingLeft;
     private bool m_isSlidingRight;
-    private CapsuleCollider m_col;
+    private Collider m_col;
     private bool m_inRightCo;
     private bool m_inLeftCo;
     private bool m_isPaused;
@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
-        m_col = GetComponent<CapsuleCollider>();
+        m_col = GetComponent<Collider>();
     }
 
     // Update is called once per frame

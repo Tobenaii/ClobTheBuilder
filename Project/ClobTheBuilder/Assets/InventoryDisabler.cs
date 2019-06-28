@@ -11,4 +11,9 @@ public class InventoryDisabler : MonoBehaviour
     {
         m_slots.SetActive(false);
     }
+
+    private void Update()
+    {
+        Debug.Log(Time.timeScale);
+    }
 }

@@ -67,7 +67,6 @@ public class InGameMenu : MonoBehaviour
     }
     private void OnEnable()
     {
-        Time.timeScale = 1;
         m_startButton.SetActive(true);
     }
     // Update is called once per frame
