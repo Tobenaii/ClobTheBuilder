@@ -34,7 +34,7 @@ public class ItemSlot : MonoBehaviour
         //TODO: Object pool this shit
         GameObject item = Instantiate(m_inventory.inventoryItems[m_slotIndex].itemPrefab, transform, true);
         item.GetComponent<Item>().m_slot = this;
-        item.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        item.transform.position = new Vector3(transform.position.x, transform.position.y, 4);
     }
 
     private void OnMouseDown()
