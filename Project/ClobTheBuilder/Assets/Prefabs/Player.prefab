@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a5a15c49e95e4b8cc0a4388bfa8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_gameTime: 10
+  m_gameTime: 60
   m_gameTimer: {fileID: 11400000, guid: 81f061f48f83c2f439a8c409a1e016b2, type: 2}
   m_increaseFromWater: 0
   m_decreaseFromHeat: 0
@@ -199,14 +199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5425034912406671444}
     m_Modifications:
-    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
-      propertyPath: m_Name
-      value: SM_Sponge
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -266,6 +258,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
+      propertyPath: m_Name
+      value: SM_Sponge
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57e6f4193ac1b24429fcb0b43405846e, type: 3}
