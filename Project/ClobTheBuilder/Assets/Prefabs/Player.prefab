@@ -56,6 +56,7 @@ MonoBehaviour:
   m_jumpForce: 30
   m_wallJumpForce: {x: 10, y: 40}
   m_deadEvent: {fileID: 11400000, guid: a36a1710cfe73734d8b9e111fe7d041d, type: 2}
+  m_loveyDoveyEvent: {fileID: 11400000, guid: 33334014aa846b34da4b79f73515409c, type: 2}
 --- !u!54 &5425034912406671446
 Rigidbody:
   m_ObjectHideFlags: 0

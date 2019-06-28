@@ -8,6 +8,8 @@ public class InGameMenu : MonoBehaviour
     [SerializeField]
     private GameObject m_gameOverMenu;
     [SerializeField]
+    private GameObject m_levelCompleteMenu;
+    [SerializeField]
     private Text m_gameOverText;
     [SerializeField]
     private string m_driedOutText;
@@ -23,6 +25,11 @@ public class InGameMenu : MonoBehaviour
     {
         m_gameOverMenu.SetActive(true);
         m_gameOverText.text = m_choppedText;
+    }
+
+    public void ShowComplete()
+    {
+        m_levelCompleteMenu.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()

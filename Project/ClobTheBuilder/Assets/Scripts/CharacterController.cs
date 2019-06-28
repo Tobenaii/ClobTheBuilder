@@ -22,6 +22,8 @@ public class CharacterController : MonoBehaviour
     private Vector2 m_wallJumpForce;
     [SerializeField]
     private GameEvent m_deadEvent;
+    [SerializeField]
+    private GameEvent m_loveyDoveyEvent;
 
     private bool m_isGrounded;
     private float m_moveSpeed;
@@ -213,9 +215,11 @@ public class CharacterController : MonoBehaviour
         }
         else if (other.CompareTag("FinishHim"))
         {
-            m_deadEvent?.Invoke();
+            m_deadEvent.Invoke();
             Destroy(gameObject);
         }
+        else if (other.CompareTag("LoveyDovey"))
+            m_loveyDoveyEvent.Invoke();
     }
 
     private void OnTriggerStay(Collider other)
