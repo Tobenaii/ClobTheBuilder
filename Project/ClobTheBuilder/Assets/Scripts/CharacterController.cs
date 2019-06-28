@@ -11,6 +11,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField]
     private float m_maxMoveSpeed;
     [SerializeField]
+    private float m_maxSprintSpeed;
+    [SerializeField]
+    private float m_sprintAcceleration;
+    private float m_currentMaxMoveSpeed;
+    private float m_currentAcceleration;
+    [SerializeField]
     private float m_jumpForce;
     [SerializeField]
     private Vector2 m_wallJumpForce;
@@ -37,19 +43,19 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButton("Right"))
         {
-            m_moveSpeed += m_moveAcceleration * Time.deltaTime;
+            m_moveSpeed += m_currentAcceleration * Time.deltaTime;
             if (m_moveSpeed < 0)
                 m_moveSpeed += m_stopAcceleration * Time.deltaTime;
-            if (m_moveSpeed >= m_maxMoveSpeed)
-                m_moveSpeed = m_maxMoveSpeed;
+            if (m_moveSpeed >= m_currentMaxMoveSpeed)
+                m_moveSpeed = m_currentMaxMoveSpeed;
         }
         else if (Input.GetButton("Left"))
         {
-            m_moveSpeed -= m_moveAcceleration * Time.deltaTime;
+            m_moveSpeed -= m_currentAcceleration * Time.deltaTime;
             if (m_moveSpeed > 0)
                 m_moveSpeed -= m_stopAcceleration * Time.deltaTime;
-            if (m_moveSpeed <= m_maxMoveSpeed * -1)
-                m_moveSpeed = m_maxMoveSpeed * -1;
+            if (m_moveSpeed <= m_currentMaxMoveSpeed * -1)
+                m_moveSpeed = m_currentMaxMoveSpeed * -1;
         }
         else
             m_moveSpeed = Mathf.MoveTowards(m_moveSpeed, 0, m_stopAcceleration * Time.deltaTime);
@@ -93,6 +99,16 @@ public class CharacterController : MonoBehaviour
             StartCoroutine(WallJumpLeftLeway()); 
         m_rb.MovePosition(transform.position + Vector3.right * m_moveSpeed * Time.deltaTime);
         Debug.Log(m_isSlidingLeft);
+        if (Input.GetButton("Sprint"))
+        {
+            m_currentMaxMoveSpeed = m_maxSprintSpeed;
+            m_currentAcceleration = m_sprintAcceleration;
+        }
+        else
+        {
+            m_currentMaxMoveSpeed = m_maxMoveSpeed;
+            m_currentAcceleration = m_moveAcceleration;
+        }
         if (Input.GetButtonDown("Jump"))
         {
             if (m_isGrounded)
