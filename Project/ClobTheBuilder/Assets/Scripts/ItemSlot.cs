@@ -32,7 +32,7 @@ public class ItemSlot : MonoBehaviour
             return;
         m_itemAmmount--;
         //TODO: Object pool this shit
-        GameObject item = Instantiate(m_inventory.inventoryItems[m_slotIndex].itemPrefab, transform, true);
+        GameObject item = Instantiate(m_inventory.inventoryItems[m_slotIndex].itemPrefab, null, true);
         item.GetComponent<Item>().m_slot = this;
         item.transform.position = new Vector3(transform.position.x, transform.position.y, 4);
     }
