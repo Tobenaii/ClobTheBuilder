@@ -43,7 +43,7 @@ public class Item : MonoBehaviour
         m_isGhost = true;
     }
 
-    private void Unghostify()
+    private void Place()
     {
         //Color defaultCol = m_renderer.material.color;
         //defaultCol.a = 1.0f;
@@ -53,6 +53,7 @@ public class Item : MonoBehaviour
         {
             m_slot.DestroyItem(gameObject);
         }
+        OnPlace();
     }
 
     public virtual void OnEnter(GameObject gameObject)
@@ -66,6 +67,11 @@ public class Item : MonoBehaviour
     }
 
     public virtual void OnExit(GameObject gameObject)
+    {
+
+    }
+
+    public virtual void OnPlace()
     {
 
     }
@@ -89,13 +95,13 @@ public class Item : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         if (!m_isGhost)
             return;
         m_rb.MovePosition(SnapToGrid(transform.position));
         if (Input.GetMouseButtonUp(0))
-            Unghostify();
+            Place();
         if (Input.GetButtonDown("RotateLeft"))
         {
             switch (m_rotationMode)

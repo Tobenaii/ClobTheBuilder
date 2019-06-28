@@ -280,7 +280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rotationMode: 0
   m_slot: {fileID: 0}
-  m_moveDistance: 0
+  m_moveDistance: 10
+  m_moveSpeed: 5
+  m_stopTime: 3
+  m_rotateSpeed: 5
 --- !u!54 &8430514326394444159
 Rigidbody:
   m_ObjectHideFlags: 0
