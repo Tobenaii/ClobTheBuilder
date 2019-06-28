@@ -25,7 +25,7 @@ MonoBehaviour:
       type: 3}
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     itemAmmount: 1
-  - itemPrefab: {fileID: 6352304448125007622, guid: 522b35dc317dfa9429f636caf58bcbbc,
+  - itemPrefab: {fileID: 7461786331526465373, guid: 2bf6a529ee3ee7447bbbe5730fbccbe5,
       type: 3}
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     itemAmmount: 1

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_slot: {fileID: 0}
   m_moveDistance: 10
   m_moveSpeed: 5
-  m_stopTime: 3
-  m_rotateSpeed: 20
+  m_stopTime: 0.2
+  m_rotateSpeed: 60
 --- !u!54 &3541850814665354102
 Rigidbody:
   m_ObjectHideFlags: 0
